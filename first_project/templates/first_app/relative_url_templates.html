@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="">
+    </head>
+    <body>  
+        <h1>WELCOME TO RELATIVE TEMPLATES </h1>
+        <!-- first_app maches app_name from first_app.urls.py file -->
+        <!-- the 'other part is the the name='other' from the urls.py file -->
+        <!-- make you to leave NO SPACES AFTER other -->
+        <a href="{% url 'first_app:other' %}">The OTHER page</a>
+        <!-- calling the admin page it is installed as an app in settings -->
+        <a href="{% url 'admin:index' %}">ADMIN PAGE</a>
+        <!-- to get to the undex page -->
+        <a href="{% url 'index' %}">LINK TO INDEX</a>
+
+        
+     
+        <script src="" async defer></script>
+    </body>
+</html>

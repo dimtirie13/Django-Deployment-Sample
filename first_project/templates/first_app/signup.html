@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+{% extends "first_app/base.html" %}
+<!-- {% load staticfiles %} if i had any --> 
+    {% block body_block %}
+    <div class="jumbotron">
+        {% if registered %}
+            <h1>Thank you for registering</h1>
+        {% else %}
+        <h3>Register Here</h3>
+        <h4>Fill out the form</h4>
+        <form method="post" enctype='multipart/form-data'>
+        {% csrf_token %}
+        {{ user_form.as_p }}
+        {{ profile_form.as_p }}
+        <input type="submit" value="Register">
+        </form>
+        {% endif %}
+    </div>
+    {% endblock %}
